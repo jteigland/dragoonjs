@@ -1,7 +1,11 @@
-scene-view * {
+scene-view {
     position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
-.overlay {
-    position: fixed; 
+scene-view * {
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
