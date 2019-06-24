@@ -8,7 +8,7 @@ import { TextComponent } from './dragoon/components/text.component.mjs';
 const frame = document.getElementById('main-view');
 const mainScene = new Scene([
     new Entity(1, [
-        new TransformComponent(new Position(0, 0), new Dimension(11, 2.5)),
+        new TransformComponent(new Position(0, 0), new Dimension(11, 7.5)),
         new TextComponent('Hello World.')
     ])
 ]);

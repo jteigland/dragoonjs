@@ -15,13 +15,13 @@ export class RenderSystem {
     static draw(transform, drawable, context) {
         const viewWidth = context.viewFrame.offsetWidth;
         const viewHeight = context.viewFrame.offsetHeight;
-        const pixelUnit = viewWidth / context.activeScene.gridWidth;
-        console.log(pixelUnit);
+        const screenXUnit = viewWidth / context.activeScene.gridSize;
+        const screenYUnit = viewHeight / context.activeScene.gridSize;
         const element = drawable.element;
-        element.style.left = viewWidth / 2 + (transform.position.x - (transform.dimension.width / 2)) * pixelUnit;
-        element.style.top = viewHeight / 2 + (transform.position.y - (transform.dimension.height / 2)) * pixelUnit;
-        element.style.width = transform.dimension.width * pixelUnit;
-        element.style.height = transform.dimension.height * pixelUnit;
+        element.style.left = viewWidth / 2 + (transform.position.x - (transform.dimension.width / 2)) * screenXUnit;
+        element.style.top = viewHeight / 2 + (transform.position.y - (transform.dimension.height / 2)) * screenYUnit;
+        element.style.width = transform.dimension.width * screenXUnit;
+        element.style.height = transform.dimension.height * screenYUnit;
         context.viewFrame.appendChild(element);
     }
 }

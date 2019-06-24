@@ -1,7 +1,7 @@
 export class Scene {
-    constructor(entities = [], gridWidth = 200) {
+    constructor(entities = [], gridSize = 200) {
         this.entities = entities;
-        this.gridWidth = gridWidth;
+        this.gridSize = gridSize;
     }
 
     static get emptyScene() { return new Scene([]); }
