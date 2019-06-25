@@ -1,5 +1,5 @@
-import { Scene } from './scene.mjs';
-import { EventSystem } from './systems/event.system.mjs';
+import { Scene } from './scene.js';
+import { EventSystem } from './systems/event.system.js';
 
 export class Context {
     constructor(viewFrame, activeScene = Scene.emptyScene) {

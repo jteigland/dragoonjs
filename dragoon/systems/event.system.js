@@ -1,4 +1,4 @@
-import Dragoon from '../dragoon.mjs';
+import Dragoon from '../dragoon.js';
 
 export class EventSystem {
     static addEvent(event, handler) {

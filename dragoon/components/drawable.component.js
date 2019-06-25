@@ -1,4 +1,4 @@
-import { Component } from './component.mjs';
+import { Component } from './component.js';
 
 export class DrawableComponent extends Component {
     constructor() {

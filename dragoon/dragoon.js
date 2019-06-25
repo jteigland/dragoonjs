@@ -1,5 +1,5 @@
-import { App } from './app.mjs';
-import { RenderSystem } from './systems/render.system.mjs';
+import { App } from './app.js';
+import { RenderSystem } from './systems/render.system.js';
 
 class Dragoon {
     constructor() {

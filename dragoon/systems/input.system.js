@@ -1,4 +1,4 @@
-import { EventSystem } from './event.system.mjs';
+import { EventSystem } from './event.system.js';
 
 export class InputSystem {
     static registerInputEvents() {

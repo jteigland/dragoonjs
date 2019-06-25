@@ -1,6 +1,6 @@
-import { RenderSystem } from './render.system.mjs';
-import Dragoon from '../dragoon.mjs';
-import { InputSystem } from './input.system.mjs';
+import { RenderSystem } from './render.system.js';
+import Dragoon from '../dragoon.js';
+import { InputSystem } from './input.system.js';
 
 export class AppSystem {
     static start(app) {

@@ -1,5 +1,5 @@
-import { DrawableComponent } from './drawable.component.mjs';
-import { EventSystem } from '../systems/event.system.mjs';
+import { DrawableComponent } from './drawable.component.js';
+import { EventSystem } from '../systems/event.system.js';
 
 export class TextComponent extends DrawableComponent {
     constructor(text) {

@@ -1,4 +1,4 @@
-import { EventSystem } from './systems/event.system.mjs';
+import { EventSystem } from './systems/event.system.js';
 
 export class App {
     constructor(context, name = 'App') {
