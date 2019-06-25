@@ -1,9 +1,10 @@
-import { DrawableComponent } from './components/drawable.component.mjs';
-import { TransformComponent } from './components/transform.component.mjs';
-import { Entity } from './entity.mjs';
+import { DrawableComponent } from '../components/drawable.component.mjs';
+import { TransformComponent } from '../components/transform.component.mjs';
+import { Entity } from '../entity.mjs';
 
 export class RenderSystem {
-    static render(context) {
+    static render(app) {
+        const context = app.context;
         context.viewFrame.innerHTML = '';
         context.activeScene.entities.forEach(e => {
             const transform = Entity.getComponent(TransformComponent, e);

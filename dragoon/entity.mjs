@@ -3,6 +3,7 @@ export class Entity {
         this.id = id;
         this.components = components;
         this.components.forEach(c => c.entity = this);
+        Object.freeze(this);
     }
 
     static getComponent(componentType, entity) {
