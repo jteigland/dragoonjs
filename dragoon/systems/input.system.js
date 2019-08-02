@@ -5,5 +5,8 @@ export class InputSystem {
         window.onresize = () => {
             EventSystem.triggerEvent('viewresize');
         };
+        window.onmousewheel = ev => {
+            EventSystem.triggerEvent('mousewheel', ev);
+        };
     }
 }

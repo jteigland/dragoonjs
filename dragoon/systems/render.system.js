@@ -16,13 +16,23 @@ export class RenderSystem {
     static draw(transform, drawable, context) {
         const viewWidth = context.viewFrame.offsetWidth;
         const viewHeight = context.viewFrame.offsetHeight;
-        const screenXUnit = viewWidth / context.activeScene.gridSize;
-        const screenYUnit = viewHeight / context.activeScene.gridSize;
+        const screenXUnit = this.screenXUnit(context);
+        const screenYUnit = this.screenYUnit(context);
+        const screenOffsetX = context.activeScene.viewOffsetX * screenXUnit;
+        const screenOffsetY = context.activeScene.viewOffsetY * screenYUnit;
         const element = drawable.element;
-        element.style.left = viewWidth / 2 + (transform.position.x - (transform.dimension.width / 2)) * screenXUnit;
-        element.style.top = viewHeight / 2 + (transform.position.y - (transform.dimension.height / 2)) * screenYUnit;
+        element.style.left = viewWidth / 2 + (transform.position.x - (transform.dimension.width / 2)) * screenXUnit + screenOffsetX;
+        element.style.top = viewHeight / 2 + (transform.position.y - (transform.dimension.height / 2)) * screenYUnit + screenOffsetY;
         element.style.width = transform.dimension.width * screenXUnit;
         element.style.height = transform.dimension.height * screenYUnit;
         context.viewFrame.appendChild(element);
+    }
+
+    static screenXUnit(context) {
+        return context.viewFrame.offsetWidth / context.activeScene.gridSize;
+    }
+
+    static screenYUnit(context) {
+        return context.viewFrame.offsetHeight / context.activeScene.gridSize;
     }
 }

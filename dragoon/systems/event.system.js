@@ -5,7 +5,7 @@ export class EventSystem {
         Dragoon.handlers[event] = handler;
     }
 
-    static triggerEvent(event) {
-        Dragoon.handlers[event]();
+    static triggerEvent(event, value) {
+        Dragoon.handlers[event](value);
     }
 }
