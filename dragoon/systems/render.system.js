@@ -20,9 +20,10 @@ export class RenderSystem {
         const screenYUnit = this.screenYUnit(context);
         const screenOffsetX = context.activeScene.viewOffsetX * screenXUnit;
         const screenOffsetY = context.activeScene.viewOffsetY * screenYUnit;
+        console.log(screenOffsetY);
         const element = drawable.element;
         element.style.left = viewWidth / 2 + (transform.position.x - (transform.dimension.width / 2)) * screenXUnit + screenOffsetX;
-        element.style.top = viewHeight / 2 + (transform.position.y - (transform.dimension.height / 2)) * screenYUnit + screenOffsetY;
+        element.style.bottom = viewHeight / 2 + (transform.position.y - (transform.dimension.height / 2)) * screenYUnit - screenOffsetY;
         element.style.width = transform.dimension.width * screenXUnit;
         element.style.height = transform.dimension.height * screenYUnit;
         context.viewFrame.appendChild(element);

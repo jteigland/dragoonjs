@@ -1,5 +1,11 @@
 export class Component {
     constructor() {
-        this.entity = null;
+        this._entity = null;
+        this._onAttach = () => { };
+    }
+
+    set entity(value) {
+        this._entity = value;
+        this._onAttach();
     }
 }

@@ -1,20 +1,11 @@
-import { DrawableComponent } from './drawable.component.js';
+import { Component } from './component.js';
 import { EventSystem } from '../systems/event.system.js';
 
-export class TextComponent extends DrawableComponent {
+export class TextComponent extends Component {
     constructor(text, fontOptions) {
         super();
         this._text = text;
         this._fontOptions = fontOptions;
-    }
-
-    get element() {
-        const e = document.createElement('span');
-        e.innerHTML = this.text;
-        Object.keys(this.fontOptions).forEach(styleRule => {
-            if (typeof this.fontOptions[styleRule] !== 'undefined') e.style[styleRule] = this.fontOptions[styleRule];
-        });
-        return e;
     }
 
     get text() {
