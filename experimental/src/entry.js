@@ -1,4 +1,4 @@
-import { Context } from '../dragoon/context.js';
+import { Context } from '../dragoon/context.js.js';
 import { AppSystem } from '../dragoon/systems/app.system.js';
 import { Scene, ViewConstraints } from '../dragoon/scene.js';
 import { Entity } from '../dragoon/entity.js';

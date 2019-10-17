@@ -1,6 +1,6 @@
-import { DrawableComponent } from '../components/drawable.component.js';
-import { TransformComponent } from '../components/transform.component.js';
-import { Entity } from '../entity.js';
+import { DrawableComponent } from '../components/drawable.component.js.js';
+import { TransformComponent } from '../components/transform.component.js.js';
+import { Entity } from '../entity.js.js';
 
 export class RenderSystem {
     static render(app) {

@@ -1,7 +1,7 @@
-import { App } from './app.js';
-import { RenderSystem } from './systems/render.system.js';
-import { Scene } from './scene.js';
-import { EventSystem } from './systems/event.system.js';
+import { App } from './app.js.js';
+import { RenderSystem } from './systems/render.system.js.js';
+import { Scene } from './scene.js.js';
+import { EventSystem } from './systems/event.system.js.js';
 
 class Dragoon {
     constructor() {

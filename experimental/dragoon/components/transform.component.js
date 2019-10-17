@@ -1,5 +1,5 @@
-import { Component } from './component.js';
-import { EventSystem } from '../systems/event.system.js';
+import { Component } from './component.js.js';
+import { EventSystem } from '../systems/event.system.js.js';
 
 export class TransformComponent extends Component {
     constructor(position = new Position(0, 0), dimension = new Dimension(0, 0)) {
